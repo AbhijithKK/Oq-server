@@ -3,7 +3,8 @@ import { Sequelize } from "sequelize";
 
 
 export const sequelize=new Sequelize({
-  username:"postgess",
+  dialect:"postgres",
+  username:"postgres",
   password:"root",
   host:'localhost',
   port:5432,

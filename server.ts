@@ -4,6 +4,7 @@ import env from "dotenv";
 env.config();
 import cors from "cors";
 import morgan from "morgan";
+import { sequelize } from "./models";
 
 app.use(morgan("dev"));
 app.use(
@@ -13,6 +14,9 @@ app.use(
     credentials: true,
   })
 );
-app.listen(process.env.PORT, () => {
-  console.log(`app running on port:${process.env.PORT}`);
-});
+sequelize.authenticate().then(async()=>{
+   await sequelize.sync()
+    app.listen(process.env.PORT, () => {
+        console.log(`app running on port:${process.env.PORT}`);
+    });
+})
