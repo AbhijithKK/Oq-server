@@ -16,6 +16,6 @@ export class UserDto {
   @Length(3, 225, { message: "Name at least 3 more charactr" })
   compName: string;
 
-  @IsEmpty({ message: "Choose afield" })
+  @IsEmpty({ message:"Choose afield"})
   workShop: string;
 }
