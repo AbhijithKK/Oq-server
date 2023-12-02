@@ -27,7 +27,7 @@ UserModel.init({
         allowNull:false
     },
     mobNumber:{
-        type:DataTypes.NUMBER,
+        type:DataTypes.INTEGER,
         unique:true,
         allowNull:false
     },
