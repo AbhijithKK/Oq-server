@@ -10,6 +10,6 @@ export class UserRouter {
   }
   public controler = new UserControler();
   initialRouters() {
-    this.router.post("/data",dtoValidator(UserDto,'body'), this.controler.postData);
+    this.router.post("/submitform",dtoValidator(UserDto,'body'), this.controler.postData);
   }
 }
