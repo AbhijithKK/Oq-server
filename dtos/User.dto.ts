@@ -1,21 +1,21 @@
 import { IsEmail, IsEmpty, IsNotEmpty, Length } from "class-validator";
 
 export class UserDto {
-  @IsNotEmpty({ message: "Name at least 3 more charactr" })
-  @Length(3, 225, { message: "Name at least 3 more charactr" })
+  @IsNotEmpty({ message: "Minimum 3 character Required" })
+  @Length(3, 225, { message: "Minimum 3 character Required" })
   fullName: string;
 
   @IsNotEmpty({ message: "Enter Your mobile Number" })
-  @Length(10, 10, { message: "enter yout 10 digit number" })
+  @Length(10, 10, { message: "enter your 10 digit mobile number" })
   mobNumber: number;
 
   @IsEmail({}, { message: "Enter a proper Email Address" })
   email: string;
 
-  @IsNotEmpty({ message: "Name at least 3 more charactr" })
-  @Length(3, 225, { message: "Name at least 3 more charactr" })
+  @IsNotEmpty({ message: "Minimum 3 character Required" })
+  @Length(3, 225, { message: "Minimum 3 character Required" })
   compName: string;
 
-  @IsNotEmpty({ message:"Choose afield"})
+  @IsNotEmpty({ message:"Choose a field"})
   workShop: string;
 }
