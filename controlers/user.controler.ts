@@ -10,9 +10,14 @@ export class UserControler {
       const datas: UserDto = req.body;
 
       const data=await servicess.postData1(datas)
-      console.log('gggggggg',data);
-    } catch (error) {
-      console.log(error);
+      if (data) {
+        res.status(200).json({message:['true']})
+      }
+    } catch (error:any) {
+        const val=Object.values(error?.errors[0])
+        
+        res.json({message:[val[0]]})
+
     }
   }
 }
