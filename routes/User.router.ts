@@ -3,9 +3,11 @@ import { UserControler } from "../controlers/user.controler";
 
 export class UserRouter{
     public router=Router()
+    constructor(){
+this.initialRouters()
+    }
     public controler=new UserControler()
-    constructor(){}
-   public initialRouters(){
+    initialRouters(){
     this.router.post('/data',this.controler.postData)
    } 
 
